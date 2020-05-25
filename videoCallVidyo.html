@@ -15,7 +15,7 @@
                         remoteParticipants:16,
                         logFileFilter:"error",
                         logFileName:"",
-                        userData:""
+                        userData:"" // create a method for login and registration.
                     }).then(function(vc){
                         console.log("Create Success");
                     }).catch(function(error){
@@ -27,8 +27,8 @@
             function joinCall(){
                 vidyoConnector.Connect({
                     host:"prod.vidyo.io",
-                    token:"YOUR TOKEN",
-                    displayName:"YOUR NAME",
+                    token:"<YOUR TOKEN>", //Refer Vidyo.io documentation for generating Token.
+                    displayName:"<YOUR NAME>", //You can use a function to use the user information.
                     resourceId:"demoRoom",
                     onSuccess: function(){
                         console.log("Connected!!! Yay!");
